@@ -14,8 +14,8 @@ const Modify = ({ list, setList }) => {
     const navigate = useNavigate();
 
     const onModify = () => {
-        if (inputs.subject.length < 5) {
-            alert('제목은 4자 이상 입력하세용');
+        if (inputs.subject.length < 10) {
+            alert('제목은 10자 이상 입력하세용');
             return
         }
         const r = list.map(it => String(it.id) === id ? {

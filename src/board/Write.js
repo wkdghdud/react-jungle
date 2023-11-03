@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 const Write = ({ list, setList, idRef }) => {
     const navigate = useNavigate();
 
-    const [inputs, setInputs] = useState({});
+    const [inputs, setInputs] = useState({
+        subject: '',
+        name: '',
+        content: ''
+    });
     const input = useRef([]);
 
     console.log(inputs);
@@ -26,17 +30,11 @@ const Write = ({ list, setList, idRef }) => {
     const onSubmit = e => {
         e.preventDefault();
         for (let i = 0; i < input.current.length; i++) {
-            if (input.current[i].value.length < 5) {
-                alert(`${input.current[i].name}은 4자 이상 입력하세용`);
-                input.current[i].focus();
+            if (inputs.subject.length < 10) {
+                alert('제목은 10자 이상 입력하세용');
                 return
             }
         }
-        // if (inputs.subject.length < 5) {
-        //     alert('제목은 4자 이상 입력하세용');
-        //     input.current[0].focus();
-        //     return
-        // }
         setList([
             ...list,
             inputs
@@ -86,7 +84,11 @@ const Write = ({ list, setList, idRef }) => {
                         />
                     </li>
                 </ul>
-                <button>WRITE</button>
+                <button type="submit" 
+                disabled={
+                    inputs.name ==='' || inputs.subject ==='' || inputs.content === ''? true:false
+                    }
+                    >WRITE</button>
             </form>
         </>
     )
