@@ -1,0 +1,8 @@
+#bodyDiv {
+    height:calc(100vh - 300px);
+}
+
+#boardListTiteDiv, #boardListDiv, #boardPostTiteDiv, #boardPostDiv, #boardDetailTitleDiv, #boardDetailDiv {
+    display: flex;
+    justify-content: center;
+}

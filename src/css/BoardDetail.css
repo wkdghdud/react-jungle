@@ -1,0 +1,46 @@
+#boardDetailTitle {
+    width: 500px;
+    height: 35px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+#boardDetailContent {
+    width: 500px;
+    height: 400px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    resize: none;
+}
+
+#boardDetailEditBtn, #boardDetailRemoveBtn {
+    width: 80px;
+    height: 35px;
+    font-size: 15px;
+    background-color: #4A4A4A;
+    color: white;
+    border-radius: 5%;
+    border-width: 0;
+    padding: 1%;
+    margin-left: 30%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+#boardDetailRemoveBtn{
+    margin-left: 3%;
+}
+
+#boardDetailEditBtn:hover, #boardDetailRemoveBtn:hover {
+    color: rgb(150, 150, 150);
+}
